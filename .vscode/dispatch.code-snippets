@@ -1,0 +1,14 @@
+/*
+ * @Author: qyy
+ * @Date: 2020-08-05 09:20:04
+ * @LastEditTime: 2020-10-26 10:25:34
+ * @LastEditors: qyy
+ * @Description: 用于组件创建，输入MyComPonent自动填补齐组件初始代码
+ */
+{
+  "Print to dispatch": {
+    "prefix": "dis",
+    "body": ["this.props.dispatch({", "  type: '',", "  payload: {", "    ", "  }", "})"],
+    "description": "Log output to console"
+  }
+}

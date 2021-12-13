@@ -1,0 +1,28 @@
+/*
+ * @Author: qyy
+ * @Date: 2020-08-05 09:20:04
+ * @LastEditTime: 2021-03-18 16:05:26
+ * @LastEditors: qyy
+ * @Description: 用于组件创建，输入MyComPonent自动填补齐组件初始代码
+ */
+{
+	"Print to myComponent": {
+        "prefix": "mycomponent",
+        "body": [ 
+            "import React from 'react';",
+            "",
+            "class ClassName extends React.Component {",
+            "",
+            "  render() {",
+            "",
+            "    return (",
+            "      <div></div>",
+            "    );",
+            "  }",
+            "}", 
+            "export default ClassName"
+        ],
+        "description": "Log output to console"
+    }
+}
+

@@ -1,0 +1,29 @@
+/*
+ * @Author: qyy
+ * @Date: 2020-08-05 09:20:04
+ * @LastEditTime: 2020-08-05 13:50:31
+ * @LastEditors: qyy
+ * @Description: 用于组件创建，输入MyComPonent自动填补齐组件初始代码
+ */
+ {
+	"Print to FC": {
+        "prefix": "fc",
+        "body": [ 
+			"import React from 'react';",
+			"import styles from './index.less';",
+			"",
+			"interface Props {",
+			"}",
+
+            "const : React.FC<Props> = props => {",
+            "",
+            "  return (",
+            "    <div></div>",
+            "  );",
+			"}", 
+			"",
+			"export default ClassName;"
+        ],
+        "description": "Log output to console"
+    }
+}

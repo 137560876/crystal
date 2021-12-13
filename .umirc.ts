@@ -1,9 +1,12 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
-  nodeModulesTransform: {
-    type: 'none',
-  },
-  routes: [{ path: '/', component: '@/pages/index' }],
+  dynamicImport: {},
+  publicPath: './',
   fastRefresh: {},
+  title: '水晶指引站',
+  cssLoader: {
+    localsConvention: 'camelCase',
+  },
+  cssModulesTypescriptLoader: {},
 });
