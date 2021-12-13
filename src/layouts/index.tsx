@@ -1,13 +1,15 @@
-import { IRouteComponentProps } from 'umi';
+import { IRouteComponentProps, history } from 'umi';
 import { Layout, Menu } from 'antd';
+import { useEffect } from 'react';
 import styles from './index.less';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
 export default function Home({ children }: IRouteComponentProps) {
-  console.log(123);
-
+  useEffect(() => {
+    history.replace('/');
+  }, []);
   return (
     <Layout
       style={{
