@@ -35,6 +35,13 @@ const Home: React.FC<HomeProps> = (props) => {
               link="http://192.168.6.241:8080/uicase/index.html"
             />
           </div>
+          <div className={styles.cardContainer}>
+            <Card
+              title="采购要货单"
+              describe="采购要货单的ui设计图"
+              link="http://192.168.6.241:8080/purchase/index.html"
+            />
+          </div>
         </div>
       </div>
       <div style={{ height: 240 }}>
