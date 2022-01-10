@@ -7,9 +7,6 @@ const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
 export default function Home({ children }: IRouteComponentProps) {
-  useEffect(() => {
-    history.replace('/');
-  }, []);
   return (
     <Layout
       style={{
