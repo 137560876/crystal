@@ -13,14 +13,14 @@ const Home: React.FC<HomeProps> = (props) => {
             <Card
               title="开发规范指引"
               describe="写明了如何规范的开发一个模块，以及如何快速接受最新的项目"
-              link="http://192.168.6.241:8000/#/react"
+              link="http://192.168.6.241:8080/doc/#/react"
             />
           </div>
           <div className={styles.cardContainer}>
             <Card
               title="组件文档"
               describe="介绍了组件使用的api，以及一些实现的案例"
-              link="http://192.168.6.241:8000/#/component/calender"
+              link="http://192.168.6.241:8080/doc/#/component/calender"
             />
           </div>
         </div>
