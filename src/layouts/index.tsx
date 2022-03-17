@@ -1,12 +1,27 @@
 import { IRouteComponentProps, history } from 'umi';
 import { Layout, Menu } from 'antd';
 import { useEffect } from 'react';
+import logo from '@/resource/img/layout/logo.png';
 import styles from './index.less';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
+const productList = ['i8', 'mi8', 'i6s', 'd6c', 'i6', 'i6p'];
 
 export default function Home({ children }: IRouteComponentProps) {
+  useEffect(() => {
+    history.replace('/home');
+  }, []);
+
+  const handleInPage = (item: { key: string; keyPath: Array<string> }) => {
+    const { key, keyPath } = item;
+    if (keyPath.length === 1) {
+      history.push('/' + key);
+    } else {
+      history.replace('/' + keyPath.reverse().join('/'));
+    }
+  };
+
   return (
     <Layout
       style={{
@@ -22,32 +37,42 @@ export default function Home({ children }: IRouteComponentProps) {
           left: 0,
         }}
       >
-        <div className={styles.logo} />
-        <Menu theme="light" mode="inline" defaultSelectedKeys={['1']}>
-          <Menu.Item key="1">首页</Menu.Item>
-          {/* <SubMenu key="sub1" title="User">
-            <Menu.Item key="3">Tom</Menu.Item>
-            <Menu.Item key="4">Bill</Menu.Item>
-            <Menu.Item key="5">Alex</Menu.Item>
-          </SubMenu> */}
+        <div className={styles.logoContainer}>
+          <img alt="logo" src={logo}></img>
+        </div>
+        <Menu theme="light" mode="inline" defaultSelectedKeys={['home']}>
+          <Menu.Item key="home" onClick={handleInPage}>
+            首页
+          </Menu.Item>
+          <SubMenu key="product" title="产品下载">
+            {productList.map((item) => (
+              <Menu.Item key={item} onClick={handleInPage}>
+                {item}
+              </Menu.Item>
+            ))}
+          </SubMenu>
         </Menu>
       </Sider>
       <Layout className={styles.siteLayout} style={{ marginLeft: 200 }}>
         <Header
           className={styles.siteLayoutBackground}
-          style={{ padding: 0, background: '#f5eeff' }}
+          style={{
+            padding: 0,
+            background: '#fff7db',
+            boxShadow: '0px 0px 6px #ddd',
+          }}
         />
         <Content
           style={{
             margin: '24px 16px 0',
-            overflow: 'auto',
+            overflow: 'hidden',
             background: '#fff',
           }}
         >
-          <div style={{ padding: 24, textAlign: 'center' }}>{children}</div>
+          <div style={{ height: '100%' }}>{children}</div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
-          CRYSTAL ©2021 Created by QingXiaoyuan
+          CRYSTAL ©2021 Created by QingXiaoyuan 有问题联系青小渊
         </Footer>
       </Layout>
     </Layout>
