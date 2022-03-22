@@ -6,7 +6,7 @@ import styles from './index.less';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
-const productList = ['i8', 'mi8', 'i6s', 'd6c', 'i6', 'i6p'];
+const productList = ['i8', 'mi8', 'i6s', 'd6c'];
 
 export default function Home({ children }: IRouteComponentProps) {
   useEffect(() => {
