@@ -1,11 +1,13 @@
-import { Result } from 'antd';
+import ReleasePage from '../component/default-page';
 
-const Mi8Release = () => {
+const I8Release = () => {
   return (
-    <div>
-      <Result status="404" title="404" subTitle="还没做好." />
-    </div>
+    <ReleasePage
+      version="5.1.30"
+      iosAddress="itms-services://?action=download-manifest&url=https://www.qxy.world:9999/resource/mi8.plist"
+      androidAddress="http://192.168.21.88:8080/resource/mi8.apk"
+    />
   );
 };
 
-export default Mi8Release;
+export default I8Release;
