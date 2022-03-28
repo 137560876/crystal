@@ -51,6 +51,9 @@ export default function Home({ children }: IRouteComponentProps) {
               </Menu.Item>
             ))}
           </SubMenu>
+          <Menu.Item key="test-env" onClick={handleInPage}>
+            测试环境表
+          </Menu.Item>
         </Menu>
       </Sider>
       <Layout className={styles.siteLayout} style={{ marginLeft: 200 }}>
